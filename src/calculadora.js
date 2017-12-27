@@ -12,8 +12,9 @@ var calculadora = {
         nivel += (state.selected.range - spell.range ) * 5
         nivel += (state.selected.duration - spell.duration) * 5
         nivel += (state.selected.target - spell.target) * 5
+        nivel += (state.selected.magnitude - 4) * 5
         return m(".calculadora", [
-            m("strong", "Nivel del conjuro: " + calculadora.normaliza(nivel)),
+            m("strong", "Nivel : " + calculadora.normaliza(nivel)),
         ])
     }
 }

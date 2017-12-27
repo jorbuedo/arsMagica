@@ -15,5 +15,7 @@ td, th { padding: 0; text-align: left; }
 .arte.active{outline:double 3px #ccc;}
 .arte figure{width:65px;}
 .tecnicas, .formas{display:flex;flex-wrap:wrap;}
-.rdtIni:before{content:'\2022';position:absolute;left:-10px;}
-.rdtSel:after{content:'\2022';position:absolute;transform: translateX(5px);}
+.valueIni:before{content:'\2022';position:absolute;left:-10px;}
+.valueSel:after{content:'\2022';position:absolute;transform: translateX(5px);}
+.calculadora{float:right;font-size:3em;}
+div{margin:5px;}
