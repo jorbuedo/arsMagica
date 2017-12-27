@@ -1,0 +1,75 @@
+var m = require("mithril")
+var state = {
+    selected: {},
+    ranges: ["Personal", "Toque/Mirada", "Adyacente", "Cerca", "Lejos", "Visual", "Conexion arcana"],
+    durations: ["Momentaneo", "Concentracion/Diametro", "Solar", "Lunar/Anillo", "Estacional", "Anual", "Permanente/Instantaneo"],
+    targets: ["Pequeño", "Individuo", "Grupo/Sala", "Circulo/Estructura", "Limite", "Visual"],
+    tecnicas: ["Creo", "Intellego", "Muto", "Perdo", "Rego"],
+    formas: ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"],
+    combo: {
+        "Creo" : {
+            "Animal" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Aquam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Auram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Corpus" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Herbam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Ignem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Imaginem" :{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Mentem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Terram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Vim" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+        },
+        "Intellego" : {
+            "Animal" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Aquam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Auram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Corpus" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Herbam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Ignem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Imaginem" :{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Mentem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Terram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Vim" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+        },
+        "Muto" : {
+            "Animal" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Aquam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Auram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Corpus" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Herbam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Ignem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Imaginem" :{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Mentem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Terram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Vim" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+        },
+        "Perdo" : {
+            "Animal" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Aquam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Auram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Corpus" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Herbam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Ignem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Imaginem" :{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Mentem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Terram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Vim" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+        },
+        "Rego" : {
+            "Animal" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Aquam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Auram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Corpus" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Herbam" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Ignem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Imaginem" :{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Mentem" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Terram" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+            "Vim" : 	{range : 0, duration: 0, target: 0, dscr: "", magn: ""},
+        },
+    }
+}
+
+
+module.exports = state
+
