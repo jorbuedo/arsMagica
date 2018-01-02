@@ -15,6 +15,14 @@ var calculadora = {
         nivel += (state.selected.magnitude - 4) * 5
         return m(".calculadora", [
             m("strong", "Nivel : " + calculadora.normaliza(nivel)),
+            m("span", 
+                m.route.param("tecnica")
+                + m.route.param("forma") + " --- "
+                + state.ranges[state.selected.range] + " | "
+                + state.durations[state.selected.duration] + " | "
+                + state.targets[state.selected.target] + " --- "
+                + state.magnitudes[state.selected.magnitude]
+            )
         ])
     }
 }

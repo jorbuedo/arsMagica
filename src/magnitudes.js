@@ -17,13 +17,17 @@ var magnitudes = {
                         }, elem)
                     }),
                 ]),
-                m("ul", {style:"width:600px;max-width:100%;"}, [
+                m("ul.descripciones", {style:"width:600px;max-width:100%;"}, [
                     m("strong", "Descripcion"),
                     spell.magn.split('#').map(function(elem, index){
                         return m("li", elem)
                     }),
                 ]),
-            ])
+            ]),
+            m(".rdt", [
+                m("strong", "Guidelines"),
+                m("div", spell.dscr)
+            ]),
         ]
     }
 }
