@@ -1,0 +1,26 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+ul { list-style: none; }
+button, input, select, textarea { margin: 0; }
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+img, embed, iframe, object, audio, video { height: auto; max-width: 100%; }
+iframe { border: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; text-align: left; }
+body{margin-top:90px;}
+.rdt{background-color:#eee;border:solid 1px #999;border-radius:.5em;display:flex;justify-content:start;flex-wrap:wrap;width:fit-content;}
+.rdt ul{margin:1.5em;line-height:1.5em;}
+.rdt li{position:relative;cursor:pointer;}
+.arte{text-align:center;text-decoration:none;color:#333;margin:.5em;}
+.arte.active{outline:double 3px #ccc;}
+.arte figure{width:65px;}
+.tecnicas, .formas{display:flex;flex-wrap:wrap;}
+.valueIni:before{content:'\2022';position:absolute;left:-10px;}
+.valueSel:after{content:'\2022';position:absolute;transform: translateX(5px);}
+div{margin:5px;}
+.descripciones {max-width:100%;width:calc(100% - 170px);}
+.descripciones li{cursor:text;}
+.calculadora{position:fixed;top:-5px;left:-5px;background-color:#fff;border-bottom:solid 1px #ccc;width:100%;z-index:9;padding:5px 1em;}
+.calculadora span{color:#ccc;float:right;}
+.calculadora strong{font-size:2em;color:#333;}
