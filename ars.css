@@ -19,6 +19,7 @@ body{margin-top:90px;}
 .valueIni:before{content:'\2022';position:absolute;left:-10px;}
 .valueSel:after{content:'\2022';position:absolute;transform: translateX(5px);}
 div{margin:5px;}
+.descripciones {max-width:100%;width:calc(100% - 170px);}
 .descripciones li{cursor:text;}
 .calculadora{position:fixed;top:-5px;left:-5px;background-color:#fff;border-bottom:solid 1px #ccc;width:100%;z-index:9;padding:5px 1em;}
 .calculadora span{color:#ccc;float:right;}

@@ -7,7 +7,7 @@ var magnitudes = {
         return [
             m(".rdt", [
                 m("ul", [
-                    m("strong", "Magnitud"),
+                    m("strong", "Poder"),
                     state.magnitudes.map(function(elem, index){
                         return m("li", {
                             onclick:function(){
@@ -17,7 +17,7 @@ var magnitudes = {
                         }, elem)
                     }),
                 ]),
-                m("ul.descripciones", {style:"width:600px;max-width:100%;"}, [
+                m("ul.descripciones", [
                     m("strong", "Descripcion"),
                     spell.magn.split('#').map(function(elem, index){
                         return m("li", elem)
