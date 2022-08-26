@@ -1,3 +1,5 @@
-Ars Magica 4th app
+## Ars Magica 4th app
 
-Aplicacion para calcular niveles de conjuros
+Tiny app to calculate spell levels on Ars Magica 4th edition
+
+https://jorbuedo.github.io/arsMagica
